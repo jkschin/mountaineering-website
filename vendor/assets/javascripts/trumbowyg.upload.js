@@ -134,8 +134,9 @@
                                     },
 
                                     success: $.trumbowyg.upload.success || function (data) {
-                                        if (!!getDeep(data, $.trumbowyg.upload.statusPropertyName.split('.'))) {
-                                            var url = getDeep(data, $.trumbowyg.upload.urlPropertyName.split('.'));
+                                        console.log(data[$.trumbowyg.upload.urlPropertyName])
+                                        if (!!data[$.trumbowyg.upload.urlPropertyName]) {
+                                            var url = data[$.trumbowyg.upload.urlPropertyName];
                                             tbw.execCmd('insertImage', url);
                                             $('img[src="' + url + '"]:not([alt])', tbw.$box).attr('alt', values.alt);
                                             setTimeout(function () {

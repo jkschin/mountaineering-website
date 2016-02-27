@@ -33,9 +33,9 @@ if ($.trumbowyg) {
         // Add imagur parameters to upload plugin
         $.extend(true, $.trumbowyg.upload, {
             serverPath: "<%= photos_url %>",
-            fileFieldName: 'image',
+            fileFieldName: 'photo[attachment]',
             headers: {'Authorization': 'Client-ID 9e57cb1c4791cea'},
-            urlPropertyName: 'data.link'
+            urlPropertyName: 'photo_url'
         });
         }
 $('#editor').trumbowyg({

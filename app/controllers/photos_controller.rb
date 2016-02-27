@@ -1,7 +1,7 @@
 class PhotosController < ApplicationController
   before_action :set_photo, only: [:show, :edit, :update, :destroy]
 
-  respond_to :html
+  respond_to :html,:json
 
   def index
     @photos = Photo.all
@@ -23,7 +23,10 @@ class PhotosController < ApplicationController
   def create
     @photo = Photo.new(photo_params)
     @photo.save
-    respond_with(@photo)
+    respond_to do |format|
+      format.html
+      format.json { render json: {photo_url: @photo.attachment.url} }
+    end
   end
 
   def update
