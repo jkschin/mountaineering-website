@@ -89,8 +89,8 @@
                                     type: 'file',
                                     required: true
                                 },
-                                alt: {
-                                    label: 'description'
+                                caption: {
+                                    label: 'Captions'
                                 }
                             },
 
@@ -98,6 +98,7 @@
                             function (values) {
                                 var data = new FormData();
                                 data.append($.trumbowyg.upload.fileFieldName, file);
+                                data.append("photo[caption]",values.caption);
 
                                 $.trumbowyg.upload.data.map(function (cur) {
                                     data.append(cur.name, cur.value);
