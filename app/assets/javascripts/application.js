@@ -11,7 +11,7 @@
 // about supported directives.
 //
 //= require jquery
-//= require trumbowyg/trumbowyg
+//= require trumbowyg.min
 //= require trumbowyg.upload
 //= require jquery_ujs
 //= require turbolinks
