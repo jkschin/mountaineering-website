@@ -12,6 +12,9 @@ gem 'jbuilder', '~> 1.2'
 gem 'paperclip', git: 'git://github.com/thoughtbot/paperclip.git'
 gem 'aws-sdk'
 gem 'trumbowyg_rails'
+group :production do
+  gem 'rails_12factor'
+end
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
