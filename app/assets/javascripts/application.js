@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require bootstrap-sprockets
 //= require trumbowyg.min
 //= require trumbowyg.upload
 //= require jquery_ujs

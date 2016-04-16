@@ -1,14 +1,13 @@
 MountaineeringWebsite::Application.routes.draw do
+  root 'static_pages#home'
+  get "/expeditions" => 'static_pages#expeditions'
+  get "/about" => 'static_pages#about'
   resources :photos
-
   resources :posts
 
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
-  # You can have the root of your site routed with "root"
-  root 'application#home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
