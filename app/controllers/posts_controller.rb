@@ -1,6 +1,7 @@
+include PostsHelper
 class PostsController < ApplicationController
+  before_action :is_admin?
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-
   respond_to :html
 
   def index
