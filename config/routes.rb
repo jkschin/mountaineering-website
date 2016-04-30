@@ -1,4 +1,5 @@
 MountaineeringWebsite::Application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root 'static_pages#home'
   get "/expeditions" => 'static_pages#expeditions'
   get "/about" => 'static_pages#about'

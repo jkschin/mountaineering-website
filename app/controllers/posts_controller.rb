@@ -1,7 +1,6 @@
 include PostsHelper
 class PostsController < ApplicationController
-  before_action :is_admin?
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :is_admin?, only: [:new, :edit, :update, :destroy]
   respond_to :html
 
   def index
@@ -10,6 +9,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @post = Post.find(params[:id])
     respond_with(@post)
   end
 
