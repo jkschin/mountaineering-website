@@ -13,14 +13,14 @@
           <div class="row" style="padding:10px">
               <div class="col-md-1"></div>
               <div class="col-md-3">
-                  <a href="portfolio-item.html">
+                  <a href=<%= post_path(post.id) %>>
                       <img class="img-responsive img-hover" src="http://placehold.it/300x300" alt="">
                   </a>
               </div>
               <div class="col-md-7">
-                  <h3><%= post.name %></h3>
-                  <p><%= post.content %></p>
-                  <a class="btn btn-primary" href="portfolio-item.html">View Post</i></a>
+                  <h3><%= post.title %></h3>
+                  <p><%= truncate(post.content, :omission => "... (continued)", :length => 400) %></p>
+                  <a class="btn btn-primary" href=<%= post_path(post.id) %>>View Post</i></a>
               </div>
               <div class="col-md-1"></div>
           </div>
