@@ -12,7 +12,6 @@ gem 'jbuilder', '~> 1.2'
 gem 'paperclip', git: 'git://github.com/thoughtbot/paperclip.git'
 gem 'aws-sdk'
 gem 'rails_admin'
-gem 'bootstrap-wysihtml5-rails'
 
 group :development do
   gem 'sqlite3'
