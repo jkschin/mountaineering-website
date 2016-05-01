@@ -1,0 +1,33 @@
+<%= form.text_area field.method_name, id: 'editor' %>
+
+
+<script>
+if ($.trumbowyg) {
+        // Add imagur parameters to upload plugin
+        $.extend(true, $.trumbowyg.upload, {
+            serverPath: "/photos",
+            fileFieldName: 'photo[attachment]',
+            headers: {'Authorization': 'Client-ID 9e57cb1c4791cea'},
+            urlPropertyName: 'photo_url'
+        });
+        }
+$('#editor').trumbowyg({
+            autogrow: true,
+            fullscreenable: false,
+            btnsDef: {
+                // Customizables dropdowns
+                image: {
+                    dropdown: ['insertImage', 'upload', 'base64'],
+                    ico: 'insertImage'
+                }
+            },
+            btns: ['viewHTML',
+                '|', 'formatting',
+                '|', 'btnGrp-design',
+                '|', 'link',
+                '|', 'image',
+                '|', 'btnGrp-justify',
+                '|', 'btnGrp-lists',
+                '|', 'horizontalRule']
+        });
+</script>

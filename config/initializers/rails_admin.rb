@@ -38,7 +38,11 @@ RailsAdmin.config do |config|
   config.model Post do
     edit do
       # For RailsAdmin >= 0.5.0
-      field :content, :wysihtml5
+      field :name
+      field :title
+      field :content do
+        partial :trumbowyg
+      end
       # For RailsAdmin < 0.5.0
       # field :description do
       #   bootstrap_wysihtml5 true
