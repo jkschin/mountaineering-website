@@ -19,7 +19,7 @@
               </div>
               <div class="col-md-7">
                   <h3><%= post.title %></h3>
-                  <p><%= truncate(post.content, :omission => "... (continued)", :length => 400) %></p>
+                  <p><%= sanitize(truncate(post.content, :omission => "...", :length => 400)) %></p>
                   <a class="btn btn-primary" href=<%= post_path(post.id) %>>View Post</i></a>
               </div>
               <div class="col-md-1"></div>
