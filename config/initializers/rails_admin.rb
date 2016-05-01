@@ -40,6 +40,7 @@ RailsAdmin.config do |config|
       # For RailsAdmin >= 0.5.0
       field :name
       field :title
+      field :tag_list
       field :content do
         partial :trumbowyg
       end

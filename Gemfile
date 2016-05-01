@@ -13,6 +13,8 @@ gem 'paperclip', git: 'git://github.com/thoughtbot/paperclip.git'
 gem 'aws-sdk'
 gem 'rails_admin'
 
+gem 'acts-as-taggable-on', '~> 3.4'
+
 group :development do
   gem 'sqlite3'
 end
