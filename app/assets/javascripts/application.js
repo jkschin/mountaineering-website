@@ -16,4 +16,3 @@
 //= require trumbowyg.upload
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
