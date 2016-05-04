@@ -13,9 +13,11 @@
           <div class="row" style="padding:10px">
               <div class="col-md-1"></div>
               <div class="col-md-3">
+                  <div class="img-post-div">
                   <a href=<%= post_path(post.id) %>>
-                      <img class="img-responsive img-hover" src=<%= get_first_image(post.content) %> alt="">
+                    <img class="img-responsive img-hover" src=<%= get_first_image(post.content) %> alt="">
                   </a>
+                  </div>
               </div>
               <div class="col-md-7">
                   <h3><%= post.title %></h3>
