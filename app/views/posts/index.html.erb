@@ -19,7 +19,7 @@
               </div>
               <div class="col-md-7">
                   <h3><%= post.title %></h3>
-                  <p><%= sanitize(post.content).truncate(400, :separator => " ").html_safe %></p>
+                  <p><%= strip_tags(post.content).truncate(400, :separator => " ").html_safe %></p>
                   <a class="btn btn-primary" href=<%= post_path(post.id) %>>View Post</i></a>
               </div>
               <div class="col-md-1"></div>
