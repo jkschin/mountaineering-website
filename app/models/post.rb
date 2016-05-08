@@ -3,6 +3,6 @@ class Post < ActiveRecord::Base
   acts_as_taggable
 
 	def content
-		sanitize read_attribute(:content)
+		sanitize read_attribute(:content), attributes: %w(href style src)
 	end
 end
