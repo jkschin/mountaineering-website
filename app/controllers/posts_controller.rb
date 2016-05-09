@@ -4,7 +4,8 @@ class PostsController < ApplicationController
   respond_to :html
 
   def index
-    @posts = Post.all(:order => "created_at DESC")
+    @posts = Post.order("created_at DESC")
+    @posts = @posts.tagged_with(params[:tag]) if params[:tag]
     respond_with(@posts)
   end
 
