@@ -23,6 +23,6 @@
 }
 
 .trumbowyg-editor {
-	overflow: scroll;
-	max-height: 700px;
+	overflow: scroll !important;
+	max-height: 700px !important;
 }
