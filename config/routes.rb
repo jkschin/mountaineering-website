@@ -3,6 +3,7 @@ MountaineeringWebsite::Application.routes.draw do
   root 'static_pages#home'
   get "/expeditions" => 'static_pages#expeditions'
   get "/about" => 'static_pages#about'
+  get "/roadmap" => 'static_pages#roadmap'
   resources :photos
   resources :posts
 
