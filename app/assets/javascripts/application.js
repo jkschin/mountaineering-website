@@ -16,3 +16,5 @@
 //= require trumbowyg.upload
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery-jvectormap-2.0.3.min
+//= require jquery-jvectormap-world-mill

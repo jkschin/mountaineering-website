@@ -1,0 +1,46 @@
+<body class="body_pad">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <h2>World Map</h2>
+        <p>Here are all the mountains that we, as a club, have climbed together. Join us and help us to put more dots on this world map!</p>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+    <div class="row" style="text-align:center">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <div id="world-map" style="width: 100%; height: 40vw; max-height: 400px"></div>
+        <a href="http://jvectormap.com"><p style="font-size:10px">map from jvectormap</p></a>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+    <script>
+      $(function(){
+        $('#world-map').vectorMap({
+          map: 'world_mill',
+          scaleColors: ['#C8EEFF', '#0071A4'],
+          normalizeFunction: 'polynomial',
+          hoverOpacity: 0.7,
+          hoverColor: false,
+          markerStyle: {
+            initial: {
+              fill: '#F8E23B',
+              stroke: '#383f47'
+            }
+          },
+          backgroundColor: '#ADD8E6',
+          markers: [
+            {latLng: [6.075652, 116.558480], name: 'Mt. Kinabalu, 4095.2m'},
+            {latLng: [31.110580, 102.901870], name: 'Da Feng, 5038m'},
+            {latLng: [22.302659, 103.773968], name: 'Fansipan, 3143m'},
+            {latLng: [32.280251, 77.801667], name: 'Mt. SUTD, 6056m'},
+            {latLng: [32.399169, 77.102863], name: 'Friendship Peak, 5289m'},
+            {latLng: [24.383449, 121.230086], name: 'Xue Shan, 5289m'},
+            {latLng: [-8.411295, 116.457402], name: 'Mt. Rinjani, 3726m'}
+          ]
+        });
+      });
+    </script>
+</body>

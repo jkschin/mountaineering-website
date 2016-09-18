@@ -4,6 +4,7 @@ MountaineeringWebsite::Application.routes.draw do
   get "/expeditions" => 'static_pages#expeditions'
   get "/about" => 'static_pages#about'
   get "/roadmap" => 'static_pages#roadmap'
+  get "/worldmap" => 'static_pages#worldmap'
   resources :photos
   resources :posts
 
